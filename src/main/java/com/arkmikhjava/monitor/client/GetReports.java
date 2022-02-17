@@ -45,7 +45,7 @@ public class GetReports {
         String allFigis="OLAP\\allFigis.csv";
         candleReport.createCandleReport(apiConnector, 4, allFigis, allPrices);
 
-        //Формируем финальный отчет из кубов
+        //Формируем финальный отчет из собранных данных
         FinalReport finalReport=new FinalReport();
         String allStocks="OLAP\\allStocks.csv";
         String report="report.csv";
