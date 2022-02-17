@@ -1,28 +1,20 @@
-package com.arkmikhjava.openapi.tinkoff.client.reports;
+package com.arkmikhjava.monitor.client.reports;
 
-import com.arkmikhjava.openapi.tinkoff.client.ContextProvider;
-import com.arkmikhjava.openapi.tinkoff.client.config.ApiConnector;
-import com.arkmikhjava.openapi.tinkoff.client.config.Parameters;
-import com.arkmikhjava.openapi.tinkoff.client.tools.IoTools;
-import com.arkmikhjava.openapi.tinkoff.client.tools.RegEXPatterns;
+import com.arkmikhjava.monitor.client.config.Parameters;
+import com.arkmikhjava.monitor.client.tools.RegEXPatterns;
+import com.arkmikhjava.monitor.client.ContextProvider;
+import com.arkmikhjava.monitor.client.config.ApiConnector;
+import com.arkmikhjava.monitor.client.tools.IoTools;
 import com.google.gson.Gson;
-import ru.tinkoff.invest.openapi.model.rest.CandleResolution;
 import ru.tinkoff.invest.openapi.model.rest.Candles;
 
 import java.io.File;
 import java.io.FileWriter;
 import java.nio.file.Files;
-import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.time.LocalDateTime;
-import java.time.OffsetDateTime;
-import java.time.ZoneOffset;
 import java.util.List;
-import java.util.Optional;
 import java.util.Scanner;
 import java.util.regex.Matcher;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 //Класс, формурующий свечи согласно figi в \\reports\\figi
 public class AllCandlesReport {

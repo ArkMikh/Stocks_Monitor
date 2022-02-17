@@ -1,4 +1,4 @@
-package com.arkmikhjava.openapi.tinkoff.client.config;
+package com.arkmikhjava.monitor.client.config;
 
 
 //Класс для признака запуска в режиме Sandbox

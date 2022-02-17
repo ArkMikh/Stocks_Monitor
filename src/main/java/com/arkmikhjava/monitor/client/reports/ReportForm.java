@@ -1,7 +1,7 @@
-package com.arkmikhjava.openapi.tinkoff.client.reports;
+package com.arkmikhjava.monitor.client.reports;
 
 
-import com.arkmikhjava.openapi.tinkoff.client.tools.IoTools;
+import com.arkmikhjava.monitor.client.tools.IoTools;
 import ru.tinkoff.invest.openapi.model.rest.MarketInstrument;
 
 import java.io.IOException;
@@ -9,7 +9,7 @@ import java.lang.reflect.Field;
 import java.nio.file.*;
 import java.util.List;
 
-public class CommonReport<T> {
+public class ReportForm<T> {
 
     private static final String DEFAULT_REPORT_DIRECTORY = "OLAP";
     private static final String DEFAULT_REPORT_CHARSET = "utf-8";
@@ -26,41 +26,41 @@ public class CommonReport<T> {
 
     private Path filePath = Paths.get(reportDirectory, fileName);
 
-    public CommonReport() throws IOException {
+    public ReportForm() throws IOException {
         setReportDirectory(DEFAULT_REPORT_DIRECTORY);
     }
 
-    public CommonReport setReportObjects(List<T> reportObjects) {
+    public ReportForm setReportObjects(List<T> reportObjects) {
         this.reportObjects = reportObjects;
         return this;
     }
 
-    public CommonReport setReportName(String reportName) {
+    public ReportForm setReportName(String reportName) {
         this.reportName = reportName;
         return this;
     }
 
-    public CommonReport setReportDelimiter(String reportDelimiter) {
+    public ReportForm setReportDelimiter(String reportDelimiter) {
         this.reportDelimiter = reportDelimiter;
         return this;
     }
 
-    public CommonReport setReportCharset(String reportCharset) {
+    public ReportForm setReportCharset(String reportCharset) {
         this.reportCharset = reportCharset;
         return this;
     }
 
-    public CommonReport setHeaders(String[] headers) {
+    public ReportForm setHeaders(String[] headers) {
         this.headers = headers;
         return this;
     }
 
-    public CommonReport setFields(String[] fields) {
+    public ReportForm setFields(String[] fields) {
         this.fields = fields;
         return this;
     }
 
-    public CommonReport setFileName(String fileName) {
+    public ReportForm setFileName(String fileName) {
         this.fileName = fileName;
         setFilePath();
         return this;
@@ -94,7 +94,7 @@ public class CommonReport<T> {
         return fileName;
     }
 
-    public CommonReport setReportDirectory(String reportDirectory) throws IOException{
+    public ReportForm setReportDirectory(String reportDirectory) throws IOException{
         this.reportDirectory=reportDirectory;
         //Если директория не существует, создай её
         IoTools.createDirectoryIfNotExists(Paths.get(reportDirectory));

@@ -1,4 +1,4 @@
-package com.arkmikhjava.openapi.tinkoff.client.tools;
+package com.arkmikhjava.monitor.client.tools;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

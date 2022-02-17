@@ -1,11 +1,9 @@
-package com.arkmikhjava.openapi.tinkoff.client.reports;
+package com.arkmikhjava.monitor.client.reports;
 
-import com.arkmikhjava.openapi.tinkoff.client.tools.IoTools;
-import com.arkmikhjava.openapi.tinkoff.client.tools.RegEXPatterns;
+import com.arkmikhjava.monitor.client.tools.IoTools;
 
 import java.io.*;
 import java.nio.file.Files;
-import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Scanner;
 

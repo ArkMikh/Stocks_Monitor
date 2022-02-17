@@ -1,4 +1,4 @@
-package com.arkmikhjava.openapi.tinkoff.client.config;
+package com.arkmikhjava.monitor.client.config;
 
 import ru.tinkoff.invest.openapi.OpenApi;
 import ru.tinkoff.invest.openapi.model.rest.SandboxRegisterRequest;

@@ -1,8 +1,8 @@
-package com.arkmikhjava.openapi.tinkoff.client;
+package com.arkmikhjava.monitor.client;
 
-import com.arkmikhjava.openapi.tinkoff.client.config.ApiConnector;
-import com.arkmikhjava.openapi.tinkoff.client.config.Parameters;
-import com.arkmikhjava.openapi.tinkoff.client.reports.*;
+import com.arkmikhjava.monitor.client.config.Parameters;
+import com.arkmikhjava.monitor.client.reports.*;
+import com.arkmikhjava.monitor.client.config.ApiConnector;
 
 import ru.tinkoff.invest.openapi.model.rest.MarketInstrument;
 
@@ -25,19 +25,19 @@ public class GetReports {
         ContextProvider contextProvider = new ContextProvider(apiConnector);
 
         //Коллекции для списка акций, имен и figi
-        List<CommonReport> reportStocks = new ArrayList<>();
-        List<CommonReport> reportNames = new ArrayList<>();
-        List<CommonReport> reportFigis = new ArrayList<>();
+        List<ReportForm> reportStocks = new ArrayList<>();
+        List<ReportForm> reportNames = new ArrayList<>();
+        List<ReportForm> reportFigis = new ArrayList<>();
 
         //Получение отчетов по акциям, имени и figi, и их экспорт в файл
-        reportStocks.add(new AllStocksReport(contextProvider.getStocks().getInstruments()));
-        reportStocks.forEach(CommonReport<MarketInstrument>::doCommonExport);
+        reportStocks.add(new AllStocksReportForm(contextProvider.getStocks().getInstruments()));
+        reportStocks.forEach(ReportForm<MarketInstrument>::doCommonExport);
 
-        reportNames.add(new AllNameStockReport(contextProvider.getStocks().getInstruments()));
-        reportNames.forEach(CommonReport<MarketInstrument>::doSingleExport);
+        reportNames.add(new AllNameStockReportForm(contextProvider.getStocks().getInstruments()));
+        reportNames.forEach(ReportForm<MarketInstrument>::doSingleExport);
 
-        reportFigis.add(new AllFigiStockReport(contextProvider.getStocks().getInstruments()));
-        reportFigis.forEach(CommonReport<MarketInstrument>::doSingleExport);
+        reportFigis.add(new AllFigiStockReportForm(contextProvider.getStocks().getInstruments()));
+        reportFigis.forEach(ReportForm<MarketInstrument>::doSingleExport);
 
         //Формируем отчет по всем свечам
         AllCandlesReport candleReport=new AllCandlesReport();

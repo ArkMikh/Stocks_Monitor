@@ -1,13 +1,13 @@
-package com.arkmikhjava.openapi.tinkoff.client.reports;
+package com.arkmikhjava.monitor.client.reports;
 
 import ru.tinkoff.invest.openapi.model.rest.MarketInstrument;
 
 import java.io.IOException;
 import java.util.List;
 
-public class AllStocksReport  extends CommonReport {
+public class AllStocksReportForm extends ReportForm {
 
-    public AllStocksReport(List<MarketInstrument> instruments) throws IOException {
+    public AllStocksReportForm(List<MarketInstrument> instruments) throws IOException {
         super();
 
         this.setFileName("allStocks.csv")

@@ -1,6 +1,6 @@
-package com.arkmikhjava.openapi.tinkoff.client;
+package com.arkmikhjava.monitor.client;
 
-import com.arkmikhjava.openapi.tinkoff.client.config.ApiConnector;
+import com.arkmikhjava.monitor.client.config.ApiConnector;
 import ru.tinkoff.invest.openapi.OpenApi;
 import ru.tinkoff.invest.openapi.model.rest.*;
 
