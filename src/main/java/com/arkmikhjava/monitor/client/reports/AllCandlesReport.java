@@ -16,7 +16,7 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.regex.Matcher;
 
-//Класс, формурующий свечи согласно figi в \\reports\\figi
+//Класс, формурующий свечи согласно figi в \\OLAP\\figi
 public class AllCandlesReport {
 
     //Создаем подключение используя токен в режиме sandBox
