@@ -7,9 +7,13 @@
 | Ubiquiti Inc      | UI            |   USD             |   16.2.2022 19:00       |   13.8             |
 | Cerner            | CERN          |   USD             |   16.2.2022 15:00       |   42.93            |
 | Fix Price Group   | FIXP          |   RUB             |   14.2.2022 04:00       |   467.5            |
-  
+
+## Какая задача стояла
+Заказчику нужны данные по акциям в таком виде, которые он мог бы получать при запуске программы. Данные в таблице должны быть актуальными.
+![image](https://user-images.githubusercontent.com/99877154/154850992-f9b3bece-0052-4479-8fef-5153e343a85a.png)
+
 ## Установка  
-  Проект работает "из коробки", всё что нужно сделать — поместить token Tinkoff Invest API в файл token.txt
+  Проект работает "из коробки", всё что нужно сделать — поместить token Tinkoff Invest API в Parameters в классе main 
   Получить token Tinkoff Invest API можно по ссылке: https://www.tinkoff.ru/invest/settings/api/ (аутентификация обязательна)
 ## Принцип работы  
   1. Прописываем токен в параметре класса Parameters
